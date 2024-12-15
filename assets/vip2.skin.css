@@ -1,0 +1,1675 @@
+/*
+--------------------------------------------------------------------------------------
+SKIN CUSTOMIZATION NOTES
+--------------------------------------------------------------------------------------
+This skin is based on: /css/vip2.skin.template-light/
+
+
+*/
+
+/*
+--------------------------------------------------------------------------------------
+IMPORTS (fonts, etc.)
+--------------------------------------------------------------------------------------
+*/
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600'); */
+/* alternative more complete set: @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&amp;subset=latin-ext'); */
+
+/*
+--------------------------------------------------------------------------------------
+JAVASCRIPT REFERENCED GLOBALS
+--------------------------------------------------------------------------------------
+
+these classes are not directly applied to any elements
+instead, our javascript reads the color attribute defined by these classes and uses that value for certain items (mostly SVG elements)
+
+--------------------------------------------------------------------------------------
+*/
+
+/* MUST STAY the color of the options within the plan SVG. ONLY CHANGE IF the plan is drawn in a non-standard color.
+.option_color_base {
+	color: #000000;
+}
+*/
+
+/* options color */
+.option_color {
+  color: #004990;
+}
+
+/* options color during rollover */
+.option_color_hover {
+  color: #004990;
+}
+
+/* POI icon color */
+.poi_color {
+  color: #004990;
+}
+
+/* POI icon color during rollover */
+.poi_color_hover {
+  color: #3096d6;
+}
+
+/* halo color */
+.comp_halo_color {
+  color: #00adee;
+}
+
+/* halo buttons color during rollover */
+.comp_halo_color_hover {
+  color: #11ccff;
+}
+
+/* MUST STAY the color of the components within the library SVG. ONLY CHANGE IF the components are drawn in a non-standard color.
+.comp_color_base {
+	color: #000000;
+}
+*/
+
+/* component color when selected */
+.comp_color {
+  color: #000000;
+}
+
+/*
+--------------------------------------------------------------------------------------
+GLOBAL
+--------------------------------------------------------------------------------------
+
+tag selectors
+widely used named classes (including global overrides of jqmobile classes)
+
+--------------------------------------------------------------------------------------
+*/
+
+* {
+  /*
+	font-family: "Open Sans", sans-serif;
+	*/
+  font-weight: 400;
+}
+
+html,
+body {
+  /*
+	font-size: 14px;
+	*/
+  color: #333;
+  background: #eee;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  /*
+	font-family: "Open Sans", sans-serif;
+	*/
+  color: #333;
+  font-weight: 400;
+}
+
+input.ui-input-text,
+textarea.ui-input-text {
+  /*
+	padding: 5px 7px 7px 7px;
+	*/
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #111;
+}
+
+label.ui-input-text {
+  /*
+	font-size: 1rem;
+	*/
+}
+
+.ui-icon-fa,
+.ui-icon {
+  /*
+	font-family: "Font Awesome 5 Light";
+	font-weight: 100;
+	*/
+  color: #fff;
+}
+
+.ui-icon-fa:before,
+.ui-icon:before {
+  /*
+	font-family: "Font Awesome 5 Light";
+	*/
+}
+
+.ui-blocker.ui-blocker-darken {
+  /*
+	background-color: #333;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.60;
+	-khtml-opacity: 0.60;
+	opacity: 0.60;
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+BASIC LAYOUT
+--------------------------------------------------------------------------------------
+
+defines the overall page column/row/section structure
+
+--------------------------------------------------------------------------------------
+*/
+
+/* ----- general rows & columns (panels) ----- */
+
+/* ----- general drawer handles ----- */
+
+.ui-pnl-handle {
+  background: #d4d4d4;
+}
+
+.ui-pnl-handle-btn {
+  /*
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	*/
+  color: #333;
+}
+
+.ui-pnl-handle-btn-h {
+  /*
+	height: 26px;
+	line-height: 26px;
+	*/
+}
+
+.ui-pnl-handle-btn-h:before {
+  /*
+	content: "\f078";
+	*/
+}
+
+.ui-drawer-open .ui-pnl-handle-btn-h:before {
+  /*
+	content: "\f077";
+	*/
+}
+
+.swap-left-right .ui-pnl-handle-btn-h:before {
+  /*
+	content: "\f077";
+	*/
+}
+
+.swap-left-right .ui-drawer-open .ui-pnl-handle-btn-h:before {
+  /*
+	content: "\f078";
+	*/
+}
+
+.ui-pnl-handle-btn-v {
+  /*
+	width: 26px;
+	*/
+}
+
+.ui-pnl-handle-btn-v:before {
+  /*
+	content: "\f053";
+	*/
+}
+
+.ui-drawer-open .ui-pnl-handle-btn-v:before {
+  /*
+	content: "\f054";
+	*/
+}
+
+.swap-left-right .ui-pnl-handle-btn-v:before {
+  /*
+	content: "\f053";
+	*/
+}
+
+.swap-left-right .ui-drawer-open .ui-pnl-handle-btn-v:before {
+  /*
+	content: "\f054";
+	*/
+}
+
+/* ----- middle row ----- */
+
+#pnlMainC {
+  /*
+	width: 234px;
+	*/
+}
+
+#handleMainC {
+  /*
+	right: 234px;
+	top: 140px;
+	*/
+}
+
+/* ----- middle row: swap left & right sides ----- */
+
+.swap-left-right #handleMainC {
+  /*
+	left: 234px;
+	*/
+}
+
+/* ----- other layout ----- */
+
+#pnlMain {
+  /*
+	height: calc(100% - 85px);
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+HEADER
+--------------------------------------------------------------------------------------
+*/
+
+#pnlHeader {
+  /*
+	height: 85px;
+	*/
+}
+
+#divHeader {
+  /*
+	height: 85px;
+	*/
+}
+#divHeaderA {
+  padding: 0.5em 0.5em 0.5em 3.5em;
+  /*
+	padding: 0.5em 0.5em 0.5em 1em;
+	*/
+}
+
+#divHeaderA img {
+  max-height: 40px;
+  margin-top: 6px;
+}
+
+#divHeaderB {
+  /*
+	text-align: center;
+	padding: 0.5em;
+	*/
+}
+
+#divHeaderB img {
+  /*
+	margin-top: 2px;
+	*/
+}
+
+#divHeaderC {
+  /*
+	padding: 0.5em 1em 0.5em 0.5em;
+	*/
+}
+
+#divHeaderInfo {
+  text-align: right;
+}
+
+#divPlanName {
+  /*
+	margin-top: -5px;
+	font-size: 1.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	*/
+  color: #004990;
+}
+
+#divProjectName {
+  /*
+	margin-top: -5px;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------------------------------
+*/
+
+#pnlFooter {
+  /*
+	height: 84px;
+	*/
+}
+
+#handleFooter {
+  /*
+	bottom: 84px;
+	left: 50%;
+	margin-left: -18px;
+	*/
+}
+
+#btnHandleFooter {
+  /*
+	border-radius: 2px 2px 0 0;
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+STAGE, PLAN, EXTERIORS, HIDDEN PRINT FRAME
+--------------------------------------------------------------------------------------
+*/
+
+#layoutStage {
+  /*
+	background: #fff;
+	*/
+}
+
+#divStage {
+  /*
+	padding-top: 39px;
+	*/
+}
+
+#divPlan {
+  /*
+	background: #fff;
+	*/
+}
+
+#iframeExternalViewer {
+  /*
+	background: #fff;
+	*/
+}
+
+#divImgs {
+  /*
+	text-align: center;
+	*/
+  background: #fff;
+}
+
+#divImgs .imgs-wrapper {
+  /*
+	background: transparent;
+	*/
+}
+
+#divImgs .imgs-img {
+  /*
+	max-width: 100%;
+	max-height: 95%;
+	max-height: calc(100% - 40px);
+	*/
+}
+
+#divImgs .imgs-txt {
+  /*
+	margin-top: -2em;
+	font-size: 1.15rem;
+	font-weight: 400;
+	*/
+  color: #f0f0f0;
+}
+
+/*
+--------------------------------------------------------------------------------------
+SIDEBAR, ACCORDIONS, OPTIONS LIST, COMPONENTS/FURNITURE LISTS, EXTERIORS LIST
+--------------------------------------------------------------------------------------
+*/
+
+#pnlMainC {
+  background: #eee;
+}
+
+#handleMainC {
+  background: #d4d4d4;
+}
+
+#btnHandleC {
+}
+
+#divPreview {
+}
+
+#divPreviewLabel {
+  /*
+	top: -1.8em;
+	*/
+}
+
+#divPreviewLabel span {
+  /*
+	height: 1.8em;
+	padding: 0.6em 0.6em 0 0.6em;
+	line-height: 1em;
+	font-size: 0.9em;
+	*/
+  background: rgba(255, 255, 255, 0.6);
+  color: #111;
+  font-weight: 400;
+}
+
+.ui-collapsible-heading {
+  background: #004990;
+}
+
+.ui-collapsible-heading .ui-icon-arrow-d:before {
+  /*
+	content: "\f078";
+	font-size: 14px;
+	*/
+}
+
+.ui-collapsible-heading .ui-icon-arrow-r:before {
+  /*
+	content: "\f054";
+	font-size: 14px;
+	*/
+}
+
+.ui-collapsible-heading .ui-btn-inner {
+  /*
+	padding: 11px 0 11px 12px;
+	border-top: 1px solid rgba(0, 0, 0, 0.4);
+	font-size: 14px;
+	*/
+  border-color: rgba(200, 200, 200, 0.25);
+  color: #f0f0f0;
+}
+
+.ui-collapsible-heading .ui-btn-inner,
+.ui-collapsible-content > div .ui-collapsible-heading .ui-btn-inner {
+  background: none;
+}
+
+.ui-collapsible-heading.ui-collapsible-heading-collapsed .ui-btn-inner {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ui-collapsible-content > div .ui-collapsible-heading .ui-btn-inner {
+  /*
+	padding: 7px 0 7px 22px;
+	*/
+}
+
+.ui-collapsible-heading .ui-btn-inner .ui-btn-text {
+  /*
+	font-weight: 400;
+	*/
+}
+
+#layoutOptionsMenu {
+  /*
+	width: 234px;
+	*/
+}
+
+#layoutOptions {
+  /*
+	width: 234px;
+	*/
+}
+
+#layoutAccordion > div {
+  /*
+	min-height: 42px;
+	*/
+}
+
+#layoutAccordion > div .ui-collapsible-content > div {
+  /*
+	min-height: 34px;
+	*/
+}
+
+#layoutAccordion div.ui-controlgroup-controls {
+  background: #d4d4d4;
+}
+
+#layoutAccordion .ui-controlgroup .ui-radio {
+  /*
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	*/
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* BEGIN: v2-1 options styling (added 2018-08-28): the new "#layoutAccordion.v2-1" selector is to force the new options styling to override all current skins */
+
+#layoutAccordion.v2-1 .ui-controlgroup .ui-checkbox .ui-btn,
+#layoutAccordion.v2-1 .ui-controlgroup .ui-radio .ui-btn {
+  background: #d4d4d4;
+}
+
+#layoutAccordion.v2-1 .ui-controlgroup .ui-checkbox.ui-disabled,
+#layoutAccordion.v2-1 .ui-controlgroup .ui-radio.ui-disabled {
+  /*
+	opacity: 0.3;
+	*/
+}
+
+#layoutAccordion.v2-1 .ui-controlgroup .ui-checkbox.ui-disabled .ui-btn-inner,
+#layoutAccordion.v2-1 .ui-controlgroup .ui-radio.ui-disabled .ui-btn-inner {
+  background: #bbb;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn.ui-btn-icon-left
+  .ui-btn-inner {
+  /*
+	padding: 0.8em 0.8em 0.7em 34px;
+	line-height: 1.2em;
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn.ui-btn-icon-left.ui-checkbox-off
+  .ui-btn-inner,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn.ui-btn-icon-left.ui-radio-off
+  .ui-btn-inner {
+  /*
+	padding-left: 34px;
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon {
+  /*
+	display: inline-block;
+	background: none;
+	margin-top: -8px;
+	*/
+}
+
+#layoutAccordion.v2-1 .ui-controlgroup .ui-radio .ui-btn-inner {
+  /*
+	padding: 7px 12px 7px 34px;
+	position: absolute;
+	bottom: 0;
+	*/
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  color: #111;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon {
+  /*
+	margin-top: -9px;
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after {
+  /*
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+	top: -1px;
+	left: 0;
+	font-family: "Font Awesome 5 Solid";
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after {
+  /*
+	font-family: "Font Awesome 5 Solid";
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before {
+  /* selected checkbox background MODIFY PER CLIENT COLOR */
+  /*
+	content: "\f0c8";
+	*/
+  color: #004990;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after {
+  /* selected checkbox foreground */
+  /*
+	font-size: 12px;
+	top: 0;
+	left: 2px;
+	content: "\f00c";
+	*/
+  color: #fff;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn.ui-checkbox-off
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn.ui-radio-off
+  .ui-btn-inner
+  .ui-icon:before {
+  /*  de-selected checkbox background */
+  /*
+	content: "\f0c8";
+	*/
+  color: rgba(0, 0, 0, 0.1);
+}
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox
+  .ui-btn.ui-checkbox-off
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio
+  .ui-btn.ui-radio-off
+  .ui-btn-inner
+  .ui-icon:after {
+  /*  de-selected checkbox foreground */
+  /*
+	display: none;
+	*/
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-parent
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio.ui-opt-parenthiddenchild-parent
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:before {
+  /* selected parent checkbox background MODIFY PER CLIENT COLOR */
+  /*
+	display: block;
+	content: "\f0c8";
+	*/
+  color: #004990;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-parent
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio.ui-opt-parenthiddenchild-parent
+  .ui-btn
+  .ui-btn-inner
+  .ui-icon:after {
+  /* selected parent checkbox foreground */
+  /*
+	display: block;
+	content: "\f00c";
+	*/
+  color: #fff;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-parent
+  .ui-btn.ui-checkbox-off
+  .ui-btn-inner
+  .ui-icon:before,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio.ui-opt-parenthiddenchild-parent
+  .ui-btn.ui-radio-off
+  .ui-btn-inner
+  .ui-icon:before {
+  /* de-selected parent checkbox background */
+  /*
+	display: block;
+	content: "\f0c8";
+	*/
+  color: rgba(0, 0, 0, 0.1);
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-parent
+  .ui-btn.ui-checkbox-off
+  .ui-btn-inner
+  .ui-icon:after,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio.ui-opt-parenthiddenchild-parent
+  .ui-btn.ui-radio-off
+  .ui-btn-inner
+  .ui-icon:after {
+  /*  de-selected parent checkbox foreground */
+  /*
+	display: block;
+	font-size: 11px;
+	top: -1px;
+	left: 3px;
+	content: "\f067";
+	*/
+  color: #999;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-child
+  .ui-btn {
+  /*
+	margin-left: 12px;
+	*/
+  background: #dcdcdc;
+}
+
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-checkbox.ui-opt-parenthiddenchild-child.ui-disabled
+  .ui-btn
+  .ui-btn-inner,
+#layoutAccordion.v2-1
+  .ui-controlgroup
+  .ui-radio.ui-opt-parenthiddenchild-child.ui-disabled
+  .ui-btn
+  .ui-btn-inner {
+  background: #bfbfbf;
+}
+
+/* END: v2-1 options styling (added 2018-08-28) */
+
+#layoutComponents,
+#layoutFurniture {
+  background: #d4d4d4;
+}
+
+li.ui-li-component.ui-li {
+  /*
+	width: 50%;
+	*/
+}
+
+li.ui-li-component.ui-li .ui-btn-text a.ui-link-inherit {
+  /*
+	height: 75px;
+	padding: 7px 5px;
+	text-align: center;
+	white-space: normal;
+	*/
+}
+
+li.ui-li-component.ui-li .svg-component {
+  /*
+	width: 40px;
+	margin: 0 auto 5px auto;
+	*/
+}
+
+/* ----- custom scrollbar ----- */
+
+#layoutAccordion .mCS-vip.mCSB_vertical.mCSB_inside {
+  background: #d4d4d4;
+}
+
+#layoutAccordion .mCS-vip.mCSB_scrollTools {
+  /*
+	margin-right: 7px;
+	*/
+}
+
+#layoutAccordion .mCS-vip.mCSB_scrollTools .mCSB_draggerRail {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+  opacity: 0.25;
+}
+
+.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+  opacity: 0.25;
+}
+
+#layoutAccordion .mCS-vip .mCSB_dragger {
+  /*
+	height: 20px;
+	*/
+}
+
+#layoutAccordion .mCS-vip.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  /*
+	width: 20px;
+	margin: 0 -2px;
+	border-radius: 2px;
+	*/
+  background: #999;
+}
+
+/*
+--------------------------------------------------------------------------------------
+MENUS, VIEW TABS, STATUS/MSG BAR, TOOLBAR, PRICING, SOCIAL ICONS, LEGEND
+--------------------------------------------------------------------------------------
+*/
+
+#handleMainA {
+  /*
+	width: 46px;
+	height: 46px;
+	*/
+}
+
+#btnHandleA {
+  /*
+	margin: 9px 0 0 11px;
+	*/
+}
+
+#btnHandleA .ui-btn-inner {
+  /*
+	width: 25px;
+	border: none;
+	border-radius: 2px;
+	background: none;
+	*/
+}
+
+#btnHandleA .ui-icon-menu:before {
+  /*
+	content: "\f0c9";
+	font-size: 21px;
+	*/
+  color: #000;
+}
+
+#btnHandleA .ui-icon-menu {
+  /*
+	padding: 3px 0 0 2.5px;
+	margin: 0;
+	*/
+}
+
+.ui-drawer-open #btnHandleA .ui-icon-menu:before {
+  /*
+	content: "\f00d";
+	font-size: 21px;
+	*/
+  color: #fff;
+}
+
+.ui-drawer-open #btnHandleA .ui-btn-inner {
+  background: #c00;
+}
+
+#divMainAMenuBlocker {
+  /*
+	height: 39px;
+	*/
+}
+
+#divStatus {
+  /*
+	padding: 8px 12px 10px 12px;
+	font-size: 16px;
+	font-weight: 400;
+	background: #ffca33;
+	color: #000;
+	*/
+}
+
+/* ----- toolbar ----- */
+
+#divTools {
+  /*
+	padding-top: 46px;
+	width: 46px;
+	*/
+  background: #d4d4d4;
+}
+
+#divTools a {
+  /*
+	width: 20px;
+	margin: 0 auto 13px auto;
+	text-align: center;
+	font-size: 20px;
+	*/
+  color: #333;
+}
+
+#divTools #btnZoomAll {
+  /*
+	font-size: 23px;
+	*/
+}
+
+#divZoomSlider {
+  /*
+	text-align: center;
+	margin: 20px auto 45px auto;
+	*/
+}
+
+#divZoomSlider .ui-slider-verticalInverted {
+  /*
+	width: 2px;
+	height: 100px;
+	margin: -10px 20px;
+	*/
+  background: rgba(0, 0, 0, 0.15);
+}
+
+#divZoomSlider .ui-slider-handle-verticalInverted {
+  /*
+	width: 28px;
+	height: 28px;
+	margin: -13px 0 0 -13px;
+	border-radius: 2px;
+	*/
+  background: #bbb;
+}
+
+#divZoomSlider .ui-btn-inner {
+  /*
+	padding: 6px 0 0 0;
+	*/
+}
+
+#divZoomSlider .ui-btn-text:before {
+  /*
+	content: "\f002";
+	font-family: "Font Awesome 5 Light";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	*/
+}
+
+/* ----- main menu bar: general, views/tabs ----- */
+
+#divMenu {
+  /*
+	height: 40px;
+	*/
+  background: #eee;
+}
+
+#divMenu .ui-btn {
+  background: #d4d4d4;
+}
+
+#divMenu .ui-btn.ui-btn-active {
+  background: #004990;
+}
+
+#divMenu .ui-btn-inner {
+  /*
+	padding: 8px 12px 10px 12px;
+	*/
+}
+
+#divMenu .ui-radio .ui-btn-inner .ui-btn-text {
+  /*
+	font-weight: 400;
+	*/
+}
+
+/* ----- main menu bar: pricing ----- */
+
+#divLegendHandle {
+  /*
+	transform: rotate(90deg);
+	float: left;
+	width: 28px;
+	margin: 10px 0 0 0;
+	*/
+}
+
+#btnLegendHandle {
+  /*
+	height: 28px;
+	*/
+}
+
+#btnLegendHandle .ui-btn-inner {
+  /*
+	padding-bottom: 2px;
+	padding-top: 4px;
+	*/
+}
+
+#btnLegendHandle .ui-btn-inner .ui-icon {
+  /*
+	transform: rotate(-90deg);
+	*/
+}
+
+#layoutLegend {
+  /*
+	left: 0;
+	top: -4px;
+	*/
+}
+
+#layoutLegend #divLegend {
+  /*
+	max-width: 30em;
+	max-height: 75%;
+	float: left;
+	padding: 0.3em 0.85em 0.15em 0.85em;
+	border: 1px solid #999;
+	border-top: none;
+	text-shadow: none;
+	*/
+  color: #555;
+  background: #f9f9f9d4;
+}
+
+#divMenuLegend {
+  /*
+	text-align: right;
+	*/
+}
+
+#btnLegend .ui-btn-inner {
+  /*
+	padding: 6px 30px 7px 12px;
+	*/
+}
+
+#btnLegend #spanPriceAsShownNumber {
+  /*
+	font-size: 20px;
+	font-weight: 400;
+	*/
+}
+
+#btnLegend:not(.ui-btn-active) #spanPriceAsShownNumber {
+  /*
+	color: #e00;
+	*/
+}
+
+#btnLegend #spanPriceAsShownText {
+  /*
+	font-size: 14px;
+	*/
+}
+
+#btnLegend .ui-icon {
+  /*
+	right: 12px;
+	margin-top: -6px;
+	font-size: 14px;
+	*/
+}
+
+#btnLegend .ui-icon:before {
+  /*
+	content: "\f078";
+	*/
+}
+
+#tblLegendPricing tr td:nth-child(1) {
+  /*
+	width: 90px;
+	text-align: right;
+	*/
+}
+
+#tblLegendPricing tr td:nth-child(2) {
+  /*
+	width: 170px;
+	text-align: left;
+	padding-left: 3px;
+	font-size: 0.9rem;
+	*/
+}
+
+#tblLegendPricing tr.base td:nth-child(1) {
+  /*
+	font-size: 1.3em;
+	*/
+}
+
+#tblLegendPricing tr.total td:nth-child(1) {
+  /*
+	font-size: 1.3em;
+	*/
+  color: #d00;
+}
+
+#tblLegendPricing tr.base td:nth-child(2),
+#tblLegendPricing tr.total td:nth-child(2) {
+  /*
+	vertical-align: bottom;
+	padding-bottom: 0.3em;
+	*/
+}
+
+/* ----- main menu bar: social icons ----- */
+
+#divSocialIcons {
+  /*
+	margin: 7px 7px 0 7px;
+	*/
+}
+
+#divSocialIcons .ui-icon-social {
+  /*
+	margin-right: 3px;
+	opacity: 0.9;
+	transition: opacity 150ms;
+	width: 25px;
+	height: 24px;
+	border-radius: 2px;
+	font-size: 18px;
+	*/
+}
+
+#divSocialIcons .ui-icon-social > svg {
+  /*
+	width: 25px;
+	*/
+}
+
+#divSocialIcons #divPinterest {
+  /*
+	background-color: #bd081c;
+	*/
+}
+
+#divSocialIcons #divPinterest > svg {
+  /*
+	margin: 4px auto 0 auto;
+	*/
+}
+
+#divSocialIcons #divTwitter {
+  /*
+	background-color: #0084ff;
+	*/
+}
+
+#divSocialIcons #divTwitter > svg {
+  /*
+	margin: 3px auto 0 auto;
+	*/
+}
+
+#divSocialIcons #divFacebook {
+  /*
+	background-color: #3b5998;
+	*/
+}
+
+#divSocialIcons #divFacebook > svg {
+  /*
+	margin: 3px 6px 0 auto;
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+DIALOGS, POPUPS, OVERLAYS
+--------------------------------------------------------------------------------------
+*/
+
+.ui-popup-screen {
+  /*
+	background: #000;
+	*/
+}
+
+.ui-popup {
+  /*
+	border: 1px solid #000;
+	*/
+  background: #eee;
+  border-color: #fff;
+}
+
+.ui-popup.ui-content,
+.ui-popup .ui-content {
+  /*
+	max-height: 400px;
+	*/
+}
+
+.ui-popup .ui-header {
+  background: #d0d0d0;
+  border-color: #d0d0d0;
+}
+
+.ui-popup .ui-title {
+  /*
+	margin: 9px 15px 10px 15px;
+	font-weight: 600;
+	*/
+  color: #333;
+}
+
+.ui-popup .ui-content {
+  /*
+	padding: 15px;
+	*/
+}
+
+.ui-popup .ui-popup-btns {
+  /*
+	padding: 8px 15px 15px 15px;
+	*/
+}
+
+.ui-grid-a .ui-block-a {
+  /*
+	padding-right: 10px;
+	*/
+}
+
+.ui-popup .ui-btn {
+  /*
+	margin: 0;
+	border-radius: 2px;
+	*/
+  background: #004990;
+  color: #f0f0f0;
+}
+
+.ui-popup .ui-btn-inner,
+.ui-footer .ui-btn-icon-left .ui-btn-inner,
+.ui-mini .ui-btn-icon-left .ui-btn-inner,
+.ui-mini.ui-btn-icon-left .ui-btn-inner {
+  /*
+	background: transparent;
+	padding: 8px 10px;
+	*/
+}
+
+.ui-popup .ui-btn:hover .ui-btn-inner {
+  /*
+	background: rgba(255, 255, 255, 0.05);
+	*/
+}
+
+.ui-popup #btnDialogPOICancel.ui-btn,
+.ui-popup #btnDialogPOICancel.ui-btn .ui-btn-inner {
+  /*
+	background: none;
+	*/
+}
+
+.ui-popup .ui-btn-text {
+  /*
+	font-size: 14px;
+	font-weight: 400;
+	*/
+}
+
+#divDialogPrint {
+  /*
+	height: 400px;
+	*/
+}
+
+#divPrintPreview {
+  /*
+	width: 350px;
+	margin: 30px auto 0 auto;
+	*/
+}
+
+#divPrintPreview > div {
+  /*
+	margin: 20px 0;
+	border: 1px solid #000;
+	background: #fff;
+	*/
+  border-color: #ccc;
+}
+
+#divPrintPreview #divLegend {
+  /*
+	padding: 0 0.75em;
+	*/
+}
+
+#layoutDialogNote {
+  /*
+	width: 250px;
+	*/
+}
+
+#divDialogPOI {
+  /*
+	max-height: 100%;
+	text-align: center;
+	background: #000;
+	*/
+}
+
+#btnDialogPOICancel {
+  /*
+	top: 0px;
+	right: 0px;
+	*/
+}
+
+#btnDialogPOICancel .ui-btn-inner {
+  /*
+	width: 15px;
+	height: 15px;
+	*/
+}
+
+#divDialogPOI.ui-loading {
+  background: #000 url("/assets/images/common-loading-black.svg") center center
+    no-repeat;
+}
+
+#divDialogPoiImg {
+  /*
+	max-width: 100%;
+	max-height: 100%;
+	*/
+}
+
+#layoutDialogHaloSize-popup {
+  /*
+	width: 100%;
+	top: 10px;
+	*/
+}
+
+#layoutDialogHaloSize {
+  /*
+	width: 250px;
+	*/
+}
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 1024px wide (iPad landscape) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px) {
+  #layoutDialogPOI.ui-popup {
+    /*
+		max-height: 100%;
+		max-width: 100%;
+		height: 100%;
+		width: 100%;
+		*/
+  }
+}
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 768px wide (iPad portrait) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 768px) {
+  #divHeaderB * {
+    /*
+		display: none;
+		*/
+  }
+
+  #layoutOptionsImgs .ui-radio .imgs-thumb {
+    /*
+		max-width: 100%;
+		*/
+  }
+}
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 736px wide (phone landscape) & smaller & specifically iPhoneX landscape even though it's 812px wide
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 736px),
+  only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  #divHeaderA,
+  #divHeaderC {
+    /*
+		max-width: 50%;
+		*/
+  }
+
+  #handleMainC {
+    /*
+		top: 50%;
+		margin-top: -18px;
+		*/
+  }
+
+  #btnSave {
+    /*
+		top: -42px;
+		text-align: center;
+		left: 10px;
+		width: 32px;
+		height: 28px;
+		padding: 3px 0 0 1px;
+		border-radius: 2px;
+		line-height: 1em;
+		font-size: 22px;
+		color: #fff;
+		*/
+    background: #004990;
+  }
+
+  .swap-left-right #btnSave {
+    /*
+		right: 10px;
+		*/
+  }
+
+  #layoutDialogSave p,
+  #layoutDialogSave label.ui-input-text,
+  #layoutDialogSave input.ui-mini,
+  #layoutDialogSave .ui-mini input,
+  #layoutDialogSave textarea.ui-mini,
+  #layoutDialogSave .ui-popup .ui-btn-text {
+    /*
+		font-size: 13px;
+		*/
+  }
+
+  #layoutDialogSave label.ui-input-text {
+    /*
+		margin-top: 15px;
+		*/
+  }
+
+  #layoutDialogSave.ui-popup .ui-content {
+    /*
+		padding: 10px 10px 0 10px;
+		*/
+  }
+
+  #layoutDialogSave.ui-popup .ui-grid-a.ui-popup-btns {
+    /*
+		margin: 15px 0 0 0;
+		*/
+  }
+
+  #layoutDialogSave.ui-popup .ui-btn-inner {
+    /*
+		padding: 5px;
+		*/
+  }
+
+  #divImgs .imgs-txt {
+    /*
+		margin-top: -55px;
+		font-size: 1rem;
+		*/
+  }
+}
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 420px wide (phone portrait) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-device-width: 420px) {
+  #divMenu {
+    /*
+		height: 38px;
+		*/
+  }
+
+  #divMenuLegend {
+    background: #222;
+  }
+
+  #divStage {
+    /*
+		padding-top: 80px;
+		*/
+  }
+
+  #divMainAMenuBlocker {
+    /*
+		height: 80px;
+		*/
+  }
+
+  #divImgs {
+    /*
+		margin-top: 44px;
+		*/
+  }
+
+  #divImgs .imgs-txt {
+    /*
+		margin-top: 0;
+		*/
+  }
+}
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - iPhoneX specific landscape overrides
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  body {
+    background: #eee !important;
+  }
+}
+
+/*
+----------------------------------------------------------------------------
+ANY TOUCH DEVICE (regardless of screen size or display pixel density)
+----------------------------------------------------------------------------
+*/
+
+html.ifptouchdevice {
+}

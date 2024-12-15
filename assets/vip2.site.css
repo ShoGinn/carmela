@@ -1,0 +1,711 @@
+/*
+----------------------------------------------------------------------------
+JAVASCRIPT REFERENCED GLOBALS
+----------------------------------------------------------------------------
+*/
+
+/*
+for SITES app...
+option_color = #AABBCC unless the default site fill color is changed in the SVG (not recommended)
+option_color_highlight_1 = the default color of a homesite (any #AABBCC fills will be changed to this if the homesite does not have a status)
+option_color_highlight_2 = must be the same as option_color for the Site app to work correctly!!!!
+*/
+.option_color { color: #AABBCC !important; }
+.option_color_highlight_1 { color: #CCCCCC !important; }
+.option_color_highlight_2 { color: #AABBCC !important; }
+
+
+
+/*
+----------------------------------------------------------------------------
+GLOBAL
+----------------------------------------------------------------------------
+*/
+
+#divStageBlocker.ui-blocker.ui-blocker-darken {
+	display: block;
+	background-color: #333;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+	-moz-opacity: 0.20;
+	-khtml-opacity: 0.20;
+	opacity: 0.20;
+}
+
+
+
+/*
+----------------------------------------------------------------------------
+HEADER AREA
+----------------------------------------------------------------------------
+*/
+
+
+
+/*
+----------------------------------------------------------------------------
+VIEWS & SETTINGS MENU
+----------------------------------------------------------------------------
+*/
+
+#layoutMenu { display: none; }
+
+
+
+/*
+----------------------------------------------------------------------------
+STAGE & PLAN
+----------------------------------------------------------------------------
+*/
+
+#layoutStage { border-top-left-radius: 0.3em; border-top: 1px solid #000; }
+
+
+
+/*
+----------------------------------------------------------------------------
+TOOLBAR
+----------------------------------------------------------------------------
+*/
+
+#layoutTools { border-top-right-radius: 0.3em; border-top: 1px solid #000; }
+
+#divTools #btnPrint, #divTools #btnZoomOut { margin-bottom: 1.25em; }
+#divTools #divZoomSlider { margin-top: 1.25em; margin-bottom: 1.25em; }
+
+#btnSave, #btnReset, #btnFlipH, #btnFlipV, #btnNoteTool, #btnLineTool, #btnHelp { display: none; }
+
+
+
+/*
+----------------------------------------------------------------------------
+PREVIEW IMAGE AREA
+----------------------------------------------------------------------------
+*/
+
+#layoutPreview { display: none; }
+
+
+
+/*
+----------------------------------------------------------------------------
+OPTIONS TABS
+----------------------------------------------------------------------------
+*/
+
+#layoutOptionsMenu { display: none; }
+
+
+
+/*
+----------------------------------------------------------------------------
+OPTIONS AREA
+----------------------------------------------------------------------------
+*/
+
+#layoutOptions { display: none; }
+
+
+
+/*
+----------------------------------------------------------------------------
+DIALOGS
+----------------------------------------------------------------------------
+*/
+
+#modSiteOptions_layoutDialogOptionEdit { width: 300px; }
+#modSiteOptions_layoutDialogOptionEdit .dialogBtns { margin-top: 0; }
+#modSiteOptions_layoutDialogOptionEdit #modSiteOptions_txtNote { overflow: auto; height: 100px; max-height: 100px; }
+#modSiteOptions_layoutDialogOptionEdit-popup { left: 10% !important; right: auto !important; }
+
+
+
+.divDialogOptionsAvailablePlans {
+	background: #fff;
+	color: #111;
+}
+
+
+
+/* hover type tooltip on plan elements (currently used only for SITES) */
+#divStageToolTip {
+	display: none;
+	position: absolute;
+	z-index: 1001;
+	max-height: 30%;
+	max-width: 30%;
+	overflow: hidden;
+	opacity: 0.975;
+	background: #fff;
+	border: 1px solid #666;
+	border-radius: 2px;
+	text-shadow: none;
+	box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.3) !important;
+	padding: 30px 0 0 0;
+	text-align: left;
+	color: #111;
+}
+
+#divStageToolTipTitle {
+	display: none;
+	position: absolute;
+	z-index: 1002;
+	overflow: hidden;
+	height: 30px;
+	width: 100px;
+	opacity: 0.975;
+	background: #111;
+	color: #eee;
+	border: 1px solid #666;
+	border-bottom: none;
+	border-radius: 2px;
+}
+
+#divStageToolTipArrow {
+	display: none;
+	position: absolute;
+	z-index: 1003;
+	overflow: hidden;
+	height: 12px;
+	width: 12px;
+	opacity: 0.975;
+	background: #111;
+	border-left: 1px solid #666;
+	border-bottom: 1px solid #666;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#divStageToolTipArrow.onright {
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
+
+#divStageToolTipArrow.onbottom {
+	background: #fff;
+}
+
+#divStageToolTip.mCS_no_scrollbar {
+	/* padding-right: 9px; */
+}
+
+/*
+#divStageToolTip::before { content: ' '; display: block; position: absolute; height: 11px; width: 11px; background: #111; border-left: 1px solid #999; border-bottom: 1px solid #999; left: -7px; top: 9px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+#divStageToolTip.onleft::before { left: auto; right: -7px; top: 9px; -webkit-transform: rotate(-135deg); -moz-transform: rotate(-135deg); -ms-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg); }
+#divStageToolTip.onbottom::before { top: auto; bottom: 9px; background: #fff; }
+*/
+
+#divStageToolTip h3, #divStageToolTip h4, #divStageToolTip h5, #divStageToolTip p { margin: 0.6em 0; }
+#divStageToolTip h3 { color: #333; font-weight: 200 }
+#divStageToolTip h4 { margin-top: -0.4em; font-weight: 200 }
+#divStageToolTip h5 { font-size: 0.9em; font-weight: 200  }
+
+#divStageToolTip h5 .prefix { color: #666; }
+#divStageToolTip h5 .suffix { color: #444; } /* this is be overridden by javascript in most cases */
+#divStageToolTip p { color: #333; font-weight: 200  }
+
+#divStageToolTip a,
+#divStageToolTip a:link,
+#divStageToolTip a:visited,
+#divStageToolTip a:active,
+#divStageToolTip a:hover,
+#divStageToolTipTitle a,
+#divStageToolTipTitle a:link,
+#divStageToolTipTitle a:visited,
+#divStageToolTipTitle a:active,
+#divStageToolTipTitle a:hover {
+	color: #26C;
+}
+
+.ui-sitetip-title {
+	display: block;
+	font-size: 15px;
+	margin-bottom: 5px;
+	padding: 4px 9px 6px 9px;
+	background: #111;
+	color: #eee;
+}
+
+.ui-sitetip-btns {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 4px 8px;
+}
+
+.ui-sitetip-btns a {
+	display: inline-block;	
+	border: 1px solid #26C;
+	border-radius: 2px;
+	background-color: #fff;
+	padding: 0.15em 0.65em;
+	font-size: 0.8em;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 5px;
+}
+
+.ui-sitetip-body {
+	padding: 7px;
+}
+
+.ui-sitetip-head {
+	display: block;
+	font-size: 13px;
+	margin-bottom: 5px;
+	color: #000;
+}
+
+.ui-sitetip-label, 
+.ui-sitetip-value {
+	display: inline;
+	font-size: 13px;
+}
+
+.ui-sitetip-label {
+	padding-right: 0.25em;
+}
+
+.ui-sitetip-value {
+	color: #777;
+}
+
+.ui-sitetip-value:after {
+	content: '\A';
+	display: block;
+	white-space: pre-line;
+	height: 5px;
+}
+
+.ui-sitetip-thumb {
+	display: block;
+	overflow: hidden;
+	width: 150px;
+	max-width: 150px;
+	height: 103px;
+	max-height: 103px;
+	line-height: 0;
+	margin: 5px 0;
+	padding: 0;
+	position: relative;
+	background: #222;
+}
+
+.ui-sitetip-thumb-img {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.ui-sitetip-thumb-title {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	bottom: 0;
+	padding: 2px 5px;
+	width: calc(100% - 10px);
+	height: 18px;
+	font-size: 13px;
+	line-height: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background: rgba(50, 50, 50, 0.75);
+	color: #fff;
+}
+
+.ui-sitetip-thumbgrid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more {
+	display: inline;
+	cursor: pointer;
+}
+
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more img {
+	max-width: 100%;
+	opacity: 0.25;
+}
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more:hover img {
+	opacity: 0.2;
+}
+
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more .ui-sitetip-head {
+	position: relative;
+	width: 150px;
+	text-align: center;
+	font-weight: 300;
+	height: 92px;
+	margin-top: -100px;
+	top: 10px;
+}
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more:hover .ui-sitetip-head {
+	color: #0f84cc;
+}
+
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more .ui-sitetip-head span:nth-child(1) {
+	display: block;
+	font-size: 2em;
+}
+.ui-sitetip-thumbgrid.ui-sitetip-thumbgrid-more .ui-sitetip-head span:nth-child(2) {
+	display: block;
+}
+
+.ui-sitetip-thumbgrid .ui-sitetip-thumb {
+	margin: 0 5px 5px 0;
+}
+
+.ui-sitetip-thumbgrid-1c {
+	max-width: 150px;
+}
+.ui-sitetip-thumbgrid-1c .ui-sitetip-thumb {
+	margin: 0 0 5px 0;
+}
+.ui-sitetip-thumbgrid-1c .ui-sitetip-thumb {
+	flex-basis: 100%;
+}
+
+.ui-sitetip-thumbgrid-2c {
+	max-width: calc((150px * 2) - 5px);
+}
+.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb {
+	flex-basis: 49%;
+}
+.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb:nth-child(2n) {
+	margin-right: 0;
+}
+
+.ui-sitetip-thumbgrid-3c {
+	max-width: calc((150px * 3) - 5px);
+}
+.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb {
+	flex-basis: 32%;
+}
+.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb:nth-child(3n) {
+	margin-right: 0;
+}
+
+.ui-sitetip-pois {
+	margin: 9px 0 1px 0;	
+}
+
+.ui-sitetip-pois > div {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0 8px 0 0;
+}
+
+.ui-sitetip-pois > div:last-child {
+	margin-right: 0;	
+}
+
+.ui-sitetip-pois svg {
+	transform: scale(1.6);
+}
+
+#divDialogOptionsAvailablePlans .ui-sitetip-thumbgrid {
+	margin: 20px;
+}
+
+#divDialogOptionsAvailablePlans .ui-sitetip-thumb {
+	margin: 0 20px 20px 0;
+	width: 230px;
+	max-width: 230px;
+	height: 153px;
+	max-height: 153px;
+}
+
+#divDialogOptionsAvailablePlans {
+	max-height: 100% !important;
+}
+
+#divDialogOptionsAvailablePlans.mCustomScrollbar {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ----- custom scrollbar on poi dialog ----- */
+
+#divDialogPoiHtml .mCustomScrollBox {
+	width: 100%;
+}
+
+#divDialogPoiHtml .mCS-vip.mCSB_scrollTools {
+	margin-right: 7px;
+	margin-top: 40px;
+}
+
+#divDialogPoiHtml .mCS-vip.mCSB_scrollTools .mCSB_draggerRail {
+	background: rgba(255, 255, 255, 0.15);
+}
+
+#divDialogPoiHtml .mCSB_scrollTools .mCSB_buttonUp {
+	background-position: 0 0;
+	opacity: 0.25;
+}
+
+#divDialogPoiHtml .mCSB_scrollTools .mCSB_buttonDown {
+	background-position: 0 -20px;
+	opacity: 0.25;
+}
+
+#divDialogPoiHtml .mCS-vip .mCSB_dragger {
+	height: 20px;
+}
+
+#divDialogPoiHtml .mCS-vip.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 20px;
+	margin: 0 -2px;
+	border-radius: 2px;
+	background: #888;
+}
+
+
+/* ----- custom scrollbar on tooltip ----- */
+
+#divStageToolTip .mCS-vip.mCSB_vertical.mCSB_inside {
+	background: none;
+}
+
+#divStageToolTip .mCS-vip.mCSB_scrollTools {
+	margin-right: 7px;
+}
+
+#divStageToolTip .mCS-vip.mCSB_scrollTools .mCSB_draggerRail {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+#divStageToolTip .mCSB_scrollTools .mCSB_buttonUp {
+	background-position: -80px 0;
+	opacity: 0.25;
+}
+
+#divStageToolTip .mCSB_scrollTools .mCSB_buttonDown {
+	background-position: -80px -20px;
+	opacity: 0.25;
+}
+
+#divStageToolTip .mCS-vip .mCSB_dragger {
+	height: 20px;
+}
+
+#divStageToolTip .mCS-vip.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 20px;
+	margin: 0 -2px;
+	border-radius: 2px;
+	background: #aaa;
+}
+
+/*
+#divStageToolTip .mCSB_container img {
+	max-width: 100%;
+	height: 100%;
+}
+*/
+
+
+/* persistent legend on top of stage (currently used only for SITES) */
+#layoutLegend #divLegend {
+	padding: 0.3em 0.85em 0.15em 0.85em;
+	border-radius: 0;
+	border: none;
+	background: none;
+	color: #555;
+	text-shadow: none;
+
+	height: auto;
+	max-width: unset;
+	max-height: unset;
+	float: none;
+	margin: 0;
+	display: block;	
+}
+
+#btnLegendHandle { border: none; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+#btnLegendHandle .ui-btn-inner { padding: 4px 17px 3px 36px; }
+#btnLegendHandle .ui-btn-inner .ui-icon { top: 5px; }
+#btnLegendHandle .ui-btn-inner .ui-icon.ui-icon-arrow-l { top: auto; }
+#btnLegendHandle .ui-btn-inner .ui-btn-text { font-size: 0.9em; }
+
+#divLegend h3 { margin: 1.1em 0; font-size: 1em; color: #555; }
+#divLegend h4 { margin: 1em 0 0 1em; font-weight: 200; }
+#divLegend h4 .prefix { display: block; float: left; height: 1.3em; width: 1.3em; margin: 0; padding: 0; }
+#divLegend h4 .suffix { display: block; line-height: 1.3em; margin-left: 1.8em; }
+
+#tblLegendPricing { min-height: 115px; }
+#tblLegendPricing tr { display: block; transition: color 1s; }
+#tblLegendPricing tr td { display: table-cell; padding: 2px 0; }
+#tblLegendPricing tr td:nth-child(1) { width: 90px; text-align: right; }
+#tblLegendPricing tr td:nth-child(2) { width: 170px; text-align: left; padding-left: 5px; }
+
+#tblLegendPricing tr.base td:nth-child(1) { font-size: 1.4em; }
+#tblLegendPricing tr.base td:nth-child(2) { vertical-align: bottom; padding-bottom: 0.3em; }
+
+#tblLegendPricing tr.total { border-top: solid 1px #bbb; }
+#tblLegendPricing tr.total td:nth-child(1) { font-size: 1.4em; color: #0646A0; }
+#tblLegendPricing tr.total td:nth-child(2) { vertical-align: bottom; padding-bottom: 0.3em; }
+
+#divPrintPreview #divLegend { border: 1px solid #ddd; color: #333; font-size: 0.3em; padding: 0 0.5em; }
+#divPrintPreview #divLegend h4 .prefix { border: none; }
+#divPrintPreview #divLegend h4 .suffix { margin-left: 2.2em; }
+
+/* new legend placement inside sidebar */
+#layoutAccordion #divLegend {
+	height: 100vh;
+}
+
+
+
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 1024px wide (iPad landscape) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px) {
+
+	.ui-popup-screen.in {
+		opacity: 0.75;	
+	}
+	
+	.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb {
+		flex-basis: 49%;
+		height: 81px;
+	}
+	
+	.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb {
+		flex-basis: 31%;
+		height: 53px;
+	}
+	
+}
+
+
+
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 768px wide (iPad portrait) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 768px) {
+
+	#divStageToolTip {
+		max-height: 40%;
+		max-width: 40%;
+	}
+	
+	.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb {
+		flex-basis: 49%;
+		height: 81px;
+	}
+
+	.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb {
+		flex-basis: 32%;
+		height: 53px;
+	}
+	
+}
+
+
+
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 430px tall and in landscape orientation (i.e. all phones landscape) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-device-width: 736px), only screen and (max-device-height: 430px) and (orientation: landscape) {
+
+	#layoutStage {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 0;
+	}
+
+	#divDialogPoiHtml {
+		height: 100%;
+	}
+
+	#divDialogOptionsAvailablePlans .ui-sitetip-thumbgrid {
+		margin: 20px 0 20px 20px;
+		justify-content: center;
+	}
+
+	.ui-sitetip-thumbgrid-3c {
+		max-width: calc((60px * 3) + 16px);
+	}
+
+	.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb {
+		flex-basis: 31%;
+	}
+
+	.ui-sitetip-thumbgrid-2c {
+		max-width: calc((100px * 2) + 16px);
+	}
+
+	.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb {
+		flex-basis: 48%;
+	}
+
+}
+
+
+
+
+/*
+--------------------------------------------------------------------------------------
+RESPONSIVE - 430px wide (phone portrait) & smaller
+--------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-device-width: 430px) and (orientation: portrait) {
+
+	#divDialogOptionsAvailablePlans .ui-sitetip-thumbgrid {
+		margin: 20px 0 20px 20px;
+	}
+
+	.ui-sitetip-thumbgrid-3c .ui-sitetip-thumb {
+		flex-basis: 30%;
+		height: 50px;
+	}
+
+	.ui-sitetip-thumbgrid-2c .ui-sitetip-thumb {
+		flex-basis: 47%;
+		height: 60px;
+	}
+
+	#divDialogOptionsAvailablePlans .ui-sitetip-thumb {
+		width: 137px;
+		max-width: 137px;
+		height: 99px;
+		max-height: 99px;
+	}
+
+	#divDialogOptionsAvailablePlans.mCS_no_scrollbar .ui-sitetip-thumb {
+		width: 152px;
+		max-width: 152px;
+		height: 108px;
+		max-height: 108px;
+	}
+
+}

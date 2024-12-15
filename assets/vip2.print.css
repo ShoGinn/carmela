@@ -1,0 +1,24 @@
+/* note: the duplicate width and height properties on some selectors are needed to support multiple browsers */
+
+@page { margin: 0; padding: 0; border: none; width: 100%; height: 100%; width: 8.5in; height: 11in; }
+
+html, body { text-align: center; width: 100%; height: 100%; width: 8.5in; height: 11in; font-size: 14px; }
+html, body, *, svg, svg * { font-family: Arial, sans-serif; text-shadow: none; box-shadow: none; }
+html, body, .pagewrapper { float: none; margin: 0; padding: 0; border: none; background-color: #fff; color: #000; }
+
+svg { display: block; margin: 0; padding: 0; border: none; }
+g.note { font-size: 12px; }
+
+.pagewrapper { width: 100%; height: 100%; width: 8.5in; height: 11in; overflow: hidden; display: block; float: left; position: relative; page-break-inside: avoid; page-break-after: auto; }
+
+#divLegend { background-color: #fff; display: block; z-index: 999; position: absolute; height: auto; width: auto; margin: 0; text-align: left; }
+
+#divLegend h3 { margin: 1.1em 0; font-size: 1em; color: #555; font-weight: 400; }
+#divLegend h4 { margin: 0.7em 0; font-weight: 200; }
+#divLegend h4 .prefix { display: block; float: left; height: 1.3em; width: 1.3em; margin: 0; padding: 0; }
+#divLegend h4 .suffix { display: block; line-height: 1.5em; margin-left: 1.65em; font-weight: 400; }
+
+#divLegend { border: 1px solid #ccc; color: #333; font-size: 0.6em; padding: 0.15em 0.7em 0 0.7em; }
+#divLegend h4 .prefix { border: none; overflow: visible; }
+#divLegend h4 .suffix { margin-left: 1.8em; }
+

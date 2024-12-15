@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <currentuser />
+    <siteinfo id="p-1747" displayname="" clientname="David Weekley Homes - Tampa" clientdomain=""
+        clientfaviconurl="" clientmetadescription="" subheadingvisibility="Enabled Everywhere"
+        lotstatusvisibility="Enabled Everywhere" selectedplanvisibility="Disabled"
+        availableplansvisibility="Disabled" selectedexteriorvisibility="Disabled"
+        lotpremiumvisibility="Enabled Everywhere" salespricevisibility="Client Users Only"
+        infotextvisibility="Enabled Everywhere" projectname="Carmela" enablebuilderplanurls="0"
+        svgfile="assets/v-1-ism-dwh-tampa-carlmela.svgz"
+        printsvgfile="assets/print-v0.3.1-dwh-imagination-v2.2.svgz"
+        logofile="assets/dwh-logo-vip.png"
+        datalasttouched="2024-10-03 17:04:17" optiondefaultnameprefix="Homesite " />
+    <views>
+        <view id="v-2373" displayname="Site Map" svgid="v.1" legendid="lg-355" type="svg">
+</view>
+    </views>
+    <customfields>
+</customfields>
+    <options>
+        <group id="og-2268" displayname="v.1 Lots" viewid="2373">
+            <option id="o-101610" displayname="Homesite 42" data1="v.1.opt.42" visible="1"
+                enabled="1" selected="1" title1="Chipper A" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101609" displayname="Homesite 41" data1="v.1.opt.41" visible="1"
+                enabled="1" selected="1" title1="Rivergate E/S" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101608" displayname="Homesite 40" data1="v.1.opt.40" visible="1"
+                enabled="1" selected="1" title1="Whaler A/S" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101607" displayname="Homesite 39" data1="v.1.opt.39" visible="1"
+                enabled="1" selected="1" title1="Whaler C/N" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101606" displayname="Homesite 38" data1="v.1.opt.38" visible="1"
+                enabled="1" selected="1" title1="Rivergate E" text1=""
+                legenditemid="lgi-2102" buildername="" />
+            <option id="o-101605" displayname="Homesite 37" data1="v.1.opt.37" visible="1"
+                enabled="1" selected="1" title1="Rivergate G/S" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101604" displayname="Homesite 36" data1="v.1.opt.36" visible="1"
+                enabled="1" selected="1" title1="Rivergate G" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101603" displayname="Homesite 35" data1="v.1.opt.35" visible="1"
+                enabled="1" selected="1" title1="Whaler A/N" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101602" displayname="Homesite 34" data1="v.1.opt.34" visible="1"
+                enabled="1" selected="1" title1="Rivergate E/N" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101601" displayname="Homesite 33" data1="v.1.opt.33" visible="1"
+                enabled="1" selected="1" title1="Rivergate F/N" text1=""
+                legenditemid="lgi-2102" buildername="" />
+            <option id="o-101600" displayname="Homesite 32" data1="v.1.opt.32" visible="1"
+                enabled="1" selected="1" title1="Whaler A/N" text1=""
+                legenditemid="lgi-2102" buildername="" />
+            <option id="o-101599" displayname="Homesite 31" data1="v.1.opt.31" visible="1"
+                enabled="1" selected="1" title1="Rivergate E" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101598" displayname="Homesite 30" data1="v.1.opt.30" visible="1"
+                enabled="1" selected="1" title1="Whaler B" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101597" displayname="Homesite 29" data1="v.1.opt.29" visible="1"
+                enabled="1" selected="1" title1="Rivergate F" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101596" displayname="Homesite 28" data1="v.1.opt.28" visible="1"
+                enabled="1" selected="1" title1="Highlandale C" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101595" displayname="Homesite 27" data1="v.1.opt.27" visible="1"
+                enabled="1" selected="1" title1="Rivergate E" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101594" displayname="Homesite 26" data1="v.1.opt.26" visible="1"
+                enabled="1" selected="1" title1="Whaler A" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101593" displayname="Homesite 25" data1="v.1.opt.25" visible="1"
+                enabled="1" selected="1" title1="Rivergate F/S" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101592" displayname="Homesite 24" data1="v.1.opt.24" visible="1"
+                enabled="1" selected="1" title1="Rivergate G" text1=""
+                legenditemid="lgi-2102" buildername="" />
+            <option id="o-101591" displayname="Homesite 23" data1="v.1.opt.23" visible="1"
+                enabled="1" selected="1" title1="Rivergate E" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101590" displayname="Homesite 22" data1="v.1.opt.22" visible="1"
+                enabled="1" selected="1" title1="Whaler A" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101589" displayname="Homesite 21" data1="v.1.opt.21" visible="1"
+                enabled="1" selected="1" title1="Whaler C" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101588" displayname="Homesite 20" data1="v.1.opt.20" visible="1"
+                enabled="1" selected="1" title1="Rivergate C" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101587" displayname="Homesite 19" data1="v.1.opt.19" visible="1"
+                enabled="1" selected="1" title1="Rivergate E" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101586" displayname="Homesite 18" data1="v.1.opt.18" visible="1"
+                enabled="1" selected="1" title1="Rivergate F" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101585" displayname="Homesite 17" data1="v.1.opt.17" visible="1"
+                enabled="1" selected="1" title1="Norchester H" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101584" displayname="Homesite 16" data1="v.1.opt.16" visible="1"
+                enabled="1" selected="1" title1="Norchester G" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101583" displayname="Homesite 15" data1="v.1.opt.15" visible="1"
+                enabled="1" selected="1" title1="Rivergate G" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101582" displayname="Homesite 14" data1="v.1.opt.14" visible="1"
+                enabled="1" selected="1" title1="Chipper A" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101581" displayname="Homesite 13" data1="v.1.opt.13" visible="1"
+                enabled="1" selected="1" title1="Rivergate E/S" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101580" displayname="Homesite 12" data1="v.1.opt.12" visible="1"
+                enabled="1" selected="1" title1="Rivergate G" text1="" legenditemid="lgi-2102"
+                selectedorientation="Left" buildername="" />
+            <option id="o-101579" displayname="Homesite 11" data1="v.1.opt.11" visible="1"
+                enabled="1" selected="1" title1="Rivergate F" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101578" displayname="Homesite 10" data1="v.1.opt.10" visible="1"
+                enabled="1" selected="1" title1="Rivergate E/N" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101577" displayname="Homesite 9" data1="v.1.opt.9" visible="1" enabled="1"
+                selected="1" title1="Norchester I/S" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101576" displayname="Homesite 8" data1="v.1.opt.8" visible="1" enabled="1"
+                selected="1" title1="Rivergate G" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101575" displayname="Homesite 7" data1="v.1.opt.7" visible="1" enabled="1"
+                selected="1" title1="Whaler A" text1="" legenditemid="lgi-2102"
+                buildername="" />
+            <option id="o-101574" displayname="Homesite 6" data1="v.1.opt.6" visible="1" enabled="1"
+                selected="1" title1="Rivergate E" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101573" displayname="Homesite 5" data1="v.1.opt.5" visible="1" enabled="1"
+                selected="1" title1="Rivergate F/S" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101572" displayname="Homesite 4" data1="v.1.opt.4" visible="1" enabled="1"
+                selected="1" title1="Chipper C" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101571" displayname="Homesite 3" data1="v.1.opt.3" visible="1" enabled="1"
+                selected="1" title1="Rivergate G/N" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101570" displayname="Homesite 2" data1="v.1.opt.2" visible="1" enabled="1"
+                selected="1" title1="Whaler B" text1="" legenditemid="lgi-2102" buildername="" />
+            <option id="o-101569" displayname="Homesite 1" data1="v.1.opt.1" visible="1" enabled="1"
+                selected="1" title1="Rivergate E/ N" text1="" legenditemid="lgi-2102"
+                buildername="" />
+        </group>
+        <group id="og-2269" displayname="v.1 POIs" viewid="2373">
+            <option visible="1" enabled="1" selected="1" />
+        </group>
+    </options>
+    <legends>
+        <legend id="lg-355" displayname="Legend">
+            <legenditem id="lgi-2100" displayname="Available" color1="#157858" color2="#000000"
+                icon="" enableplanselections="0" selectableplans="All" ishidden="1" buildercodes="" />
+            <legenditem id="lgi-2101" displayname="Quick Move-in" color1="#ffc425" color2="#000000"
+                icon="" enableplanselections="0" selectableplans="All" ishidden="1" buildercodes="" />
+            <legenditem id="lgi-2212" displayname="Not Available" color1="#55565a" color2="#000000"
+                icon="" enableplanselections="0" selectableplans="All" ishidden="1" buildercodes="" />
+            <legenditem id="lgi-2102" displayname="Sold" color1="#ee6565" color2="#000000" icon=""
+                enableplanselections="0" selectableplans="All" ishidden="0" buildercodes="" />
+            <legenditem id="lgi-2103" displayname="Model" color1="#112d75" color2="#000000" icon=""
+                enableplanselections="0" selectableplans="All" ishidden="1" buildercodes="" />
+        </legend>
+    </legends>
+    <availableplans>
+</availableplans>
+    <availableexteriors>
+</availableexteriors>
+</site>
