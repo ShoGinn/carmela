@@ -13,7 +13,7 @@
 	<meta name="keywords"
 		content="interactive,floorplan,floor,plan,the contrado group,contrado,contradovip,vip,html5,kitchen,master,garage,covered patio,extended,options,elevations,exteriors,furniture,components">
 	<meta name="viewport"
-		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=contain, minimal-ui">
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=contain">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
 	<title>Carmela | Interactive Site Map</title>
@@ -51,9 +51,9 @@
 	<script>
 		//global vars set by PHP, needed before including all the app JS
 		var DBG = 0;
-		var dataURLBasePath = '/david-weekley-tampa/carmela/site/';
+		var dataURLBasePath = '/';
 		var dataIfpVersion = '2';
-		var dataSkinPath = '/clients/david-weekley/_client-skins/vip2.skin.template-light/';
+		var dataSkinPath = '/';
 		var dataUILayoutString = 'op=2';
 		var dataUILayoutStringSS = '';
 	</script>
@@ -153,7 +153,7 @@
 				// ajax call checking lastupdate
 				resetInactivityTimer();
 				$.ajax({
-					url: '/_v2beta/site.getdatalasttouched.php',
+					url: '/',
 					type: 'POST',
 					data: {
 						rid: VIP.Main.recordID,
@@ -184,7 +184,7 @@
 
 		//site requires a semi-modern browser with inline-svg support at a bare minimum, otherwise redirect to a requirements info page
 		if (!Modernizr.inlinesvg || (uiUserAgent.browser.name == 'IE' && uiUserAgent.browser.major <= 9)) {
-			window.location = '/info/updatebrowser.php';
+			window.location = '/';
 		}
 		//note that after all loading there is also a script that checks the uiBrowserInfo var to see if this is a recommended browser (to show a warning)
 	</script>
