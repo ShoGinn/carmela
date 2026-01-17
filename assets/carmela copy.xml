@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <site>
     <currentuser />
-    <siteinfo id="p-1747" displayname="" clientname="David Weekley Homes - Tampa" clientdomain=""
+    <siteinfo id="p-1747" displayname="" clientname="Carmela" clientdomain=""
         clientfaviconurl="" clientmetadescription="" subheadingvisibility="Enabled Everywhere"
         lotstatusvisibility="Enabled Everywhere" selectedplanvisibility="Disabled"
         availableplansvisibility="Disabled" selectedexteriorvisibility="Disabled"
@@ -9,7 +9,7 @@
         infotextvisibility="Enabled Everywhere" projectname="Carmela" enablebuilderplanurls="0"
         svgfile="assets/v-1-ism-dwh-tampa-carlmela.svgz"
         printsvgfile="assets/print-v0.3.1-dwh-imagination-v2.2.svgz"
-        logofile="assets/dwh-logo-vip.png"
+        logofile=""
         datalasttouched="2024-10-03 17:04:17" optiondefaultnameprefix="Homesite " />
     <views>
         <view id="v-2373" displayname="Site Map" svgid="v.1" legendid="lg-355" type="svg">
